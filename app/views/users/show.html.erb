@@ -19,7 +19,7 @@
         <td><%= Event.find(my_event.event_id).time %></td>
         <td><%= Event.find(my_event.event_id).location %></td>
         <td><%= User.find(current_user.id).email %></td>
-        <td><%= link_to 'Cancel', Event.find(my_event.event_id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Cancel', my_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
        <%end%>
       </tr>
     <% end %>
