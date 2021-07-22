@@ -26,7 +26,7 @@
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>
-        <td><%= link_to "Join", new_user_event_path%></td>
+        <td><%= link_to "Join", "/user_event/#{event.id}"%></td>
         <% end%>
       </tr>
     <% end %>

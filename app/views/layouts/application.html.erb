@@ -41,6 +41,14 @@
         </li>
         <% if user_signed_in?%>
         <li class="nav-item">
+          <%=link_to "My Events","/events/user/#{current_user.id}" , class:"nav-link active"%>
+        </li>
+        <%end%>
+        <li class="nav-item">
+          <%=link_to "Recent Joining", user_events_path , class:"nav-link active"%>
+        </li>
+        <% if user_signed_in?%>
+        <li class="nav-item">
           <%=link_to "Edit Profile", edit_user_registration_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
